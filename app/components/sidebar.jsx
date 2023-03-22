@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-import { Envelope, Twitter, Linkedin, Medium } from "./icons/";
+import { Envelope, Github, Linkedin, Facebook } from "./icons/";
 
 const Sidebar = ({ data }) => {
 	const { name, role, education, contactLinks } = data;
@@ -11,9 +11,9 @@ const Sidebar = ({ data }) => {
 			<div className='text-white flex flex-col p-10 items-center'>
 				<Image
 					priority
-					width={300}
-					height={300}
-					className='rounded-full h-full mb-6'
+					width={250}
+					height={250}
+					className='rounded-full h-full mt-16'
 					src='/images/cv-pic.jpg'
 					alt='vanyo-popazov'
 					aria-label='vanyo-popazov'
@@ -35,9 +35,9 @@ const Sidebar = ({ data }) => {
 						<a
 							className='icons-contactme'
 							href={contactLinks?.[1]}
-							aria-label={"twitter link"}
+							aria-label={"github link"}
 						>
-							<Twitter />
+							<Github />
 						</a>
 						<a
 							className='icons-contactme'
@@ -49,9 +49,9 @@ const Sidebar = ({ data }) => {
 						<a
 							className='icons-contactme'
 							href={contactLinks?.[3]}
-							aria-label={"medium link"}
+							aria-label={"facebook link"}
 						>
-							<Medium />
+							<Facebook />
 						</a>
 					</div>
 				</div>
